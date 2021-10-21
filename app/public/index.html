@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/vue@next"></script>
+
+  </head>
+  <body>
+    <div class="container-fluid">
+
+      <header class="row">
+        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6" >
+       <a href="img/Docker.png" target="_blank"><img class="img-responsive" src="img/Docker.png" width="100px" > </div>
+       </a><H4>
+      <div class="col-lg-9 col-md-9 col-sm-6 col-xs-6" > Data & Systems HW 1
+      </div>
+      </H4>
+      </header> 
+      <nav class="row navbar navbar-default">
+
+        <div class="navbar-header">
+          <button class="navbar-toggle"   data-toggle="collapse" data-target="#MyMenu"> 
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              </button>
+          </div>
+           <div class="collapse navbar-collapse" id="MyMenu"> 
+             <ul class="nav navbar-nav">
+        <li><a class="ribbon" href="index.html"> User </a></li>
+
+        <li><a class="ribbon" href="Page2.html"> My favourite Books</a></li>
+
+        <li><a class="ribbon" href="Page3.html"> My Playlist </a></li>
+       
+             </ul>
+      </nav> </div>
+
+
+<main class="row">
+
+
+  <div id="offerApp" class="col-lg-12 col-md-6 col-sm-6 col-xs-12 center">
+
+    <img  class="img-responsive center" v-bind:src="person.picture.large" width="100px" >
+    <br>
+
+   <!-- <div v-if="person"> -->
+    <p>{{person.name.first}} {{person.name.last}}</p>
+    <p>{{ person.location.country}}</p>
+    <!-- <p>{{ person.dob.date }}</p> -->
+    <p>{{ prettyBirthday }}</p>
+    <p>{{ person.dob.age }}</p>
+
+
+    <p><a v-bind:href="'mailto:'+person.email">{{person.email}}</a></p>
+  <!-- </div> -->
+    <!-- <p>{{ person }}</p>  -->
+     <form v-on:submit.prevent="fetchUserData">
+      <button type="submit">Reload</button>
+    </form>
+
+    <!-- <p>My name is, </h4></p>
+    <p> <h3> Edgar Johanson </h3></p>
+   <p><a href="mailto:edgar.hanson@example.com">  Email: edgar.hanson@example.com </a></p> 
+   <p>DOB:  8/2/1994</p>
+   <p>Address: 5859 Valley View Ln</p>
+   <p>Phone No: (519)-180-4108</p> -->
+
+
+  
+<a href="https://www.google.com/search?q=docker+logo&rlz=1C1UEAD_enUS962US962&sxsrf=AOaemvLhyiBnK4VBD8c_dT18OGCMWM-kPQ:1630639638790&tbm=isch&source=iu&ictx=1&fir=5xBdJUaqLlvTxM%252CQ1n-u_TTTAkEOM%252C_&vet=1&usg=AI4_-kR_PEYzYWRnJXLFp9FzF5dq_aqRag&sa=X&sqi=2&ved=2ahUKEwjhvLSD7uHyAhWfg_0HHdPYD9cQ9QF6BAgIEAE&biw=1280&bih=552&dpr=1.5#imgrc=5xBdJUaqLlvTxM"> Source for Docker IMG</a><br>
+     
+<a href="https://randomuser.me/photos"> Source for User Image</a>
+     
+   </div> 
+</main>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+
+<script src="js/index.js"></script>
+
+  </body>
+</html>
